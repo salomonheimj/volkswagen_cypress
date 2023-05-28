@@ -119,4 +119,32 @@ describe('Configure SEAT Ibiza', () => {
 
   });
 
+  it.only('should have downloaded the correct file', () => {
+    cy.get(':nth-child(1) > seat-car-selector-list-item > img.ng-star-inserted').click();
+    cy.get(':nth-child(2) > .second-column > .seat-button-text > main').click();
+    cy.get('footer[_ngcontent-c30=""] > seat-price-details-small > section > seat-button > main')
+    .click()
+    cy.get('footer > seat-price-details-small > section > seat-button > main')
+    .scrollIntoView()
+    .click()
+    cy.get('footer > seat-price-details-small > section > seat-button > main')
+    .scrollIntoView()
+    .click()
+    cy.get('footer > seat-price-details-small > section > seat-button > main')
+    .click()
+
+    cy.get('.more > .ng-star-inserted').scrollIntoView()
+
+    cy.get('.more > .ng-star-inserted').then(($link) => {
+      const url = $link.attr('href');
+    
+      cy.request(url)
+        .then((response) => {
+          expect(response.status).to.equal(200); // Assuming a status code of 200 indicates a successful download
+          // Additional assertions or actions based on the response can be added here
+        });
+    });
+
+    });
+
 });
