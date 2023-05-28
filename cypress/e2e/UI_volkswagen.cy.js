@@ -141,7 +141,7 @@ describe('Configure SEAT Ibiza', () => {
       cy.request(url)
         .then((response) => {
           expect(response.status).to.equal(200); // Assuming a status code of 200 indicates a successful download
-          // Additional assertions or actions based on the response can be added here
+          // Problems with pdf-parser on js
         });
     });
 
