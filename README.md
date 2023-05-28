@@ -1,17 +1,18 @@
 # Technical assessment
-## API automation
-Automated test for testing the GitHub API of https://api.github.com/repos/metrolab/SingleDateAndTimePicker on Cypress.
-### Installation
+## Installation
 1. Install NodeJS
 2. Clone the repository 
 ````
 git clone https://github.com/salomonheimj/volkswagen_cypress.git
 ````
-3. Go to project folder
+## API automation
+Automated test for testing the GitHub API of https://api.github.com/repos/metrolab/SingleDateAndTimePicker on Cypress.
+
+1. Go to project folder
 ````
 cd Cypress test
 ````
-4. Install Node dependencies
+2. Install Node dependencies
 ````
 npm install
 ````
