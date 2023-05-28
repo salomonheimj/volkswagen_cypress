@@ -119,7 +119,7 @@ describe('Configure SEAT Ibiza', () => {
 
   });
 
-  it.only('should have downloaded the correct file', () => {
+  it('should have downloaded the correct file', () => {
     cy.get(':nth-child(1) > seat-car-selector-list-item > img.ng-star-inserted').click();
     cy.get(':nth-child(2) > .second-column > .seat-button-text > main').click();
     cy.get('footer[_ngcontent-c30=""] > seat-price-details-small > section > seat-button > main')
